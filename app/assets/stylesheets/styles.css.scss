@@ -1,0 +1,51 @@
+$navbarBackgroundHighlight: #29264d;
+$navbarBackground: #29264d;
+
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+
+body{
+	font-family: arial,helvetica,sans-serif;
+}
+
+a{
+	color: $grayLight;
+}
+
+.hero-unit{
+	background-color: $purple;
+}
+
+.footer{
+	margin-top:100px;
+	margin-left:45%;
+	color: $grayLight;
+	a{
+		color: $gray;
+	}
+}
+
+.container{
+	color:black;
+}
+
+.navbar-inner{
+	@include box-shadow(none !important);
+	border:0;
+}
+
+.color-override1{
+	color: #8a8a8a !important;	
+}
+
+.color-override2{
+	color: #bfbfbf !important;	
+}
+
+.hero-text{
+	text-align: center;
+}
+
+.btn-primary{
+	background-color: $purple;
+}
