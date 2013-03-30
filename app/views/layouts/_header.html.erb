@@ -10,7 +10,7 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand color-override2" href="http://haikuremixproject.com">Haiku Remix</a>
+      <%= link_to "Haiku Remix", root_path, class: "brand color-override2" %>
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
@@ -19,7 +19,12 @@
     			  <li><%= link_to "Why", about_path, class: "color-override1" %></li>
   		    </ul>
           <ul class="nav pull-right">
-            <li><%= link_to "Login", "#", class: "color-override1" %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to "Edit Profile", edit_user_registration_path, class: "color-override1" %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "color-override1" %></li>
+            <% else %>
+              <li><%= link_to "Login", new_user_session_path, class: "color-override1" %></li>
+            <% end %>
           </ul>
       </div>
     </div>
