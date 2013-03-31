@@ -1,0 +1,6 @@
+<tr>
+  <td><%= haiku.text %></td>
+  <td><%= link_to 'Show', haiku %></td>
+  <td><%= link_to 'Edit', edit_haiku_path(haiku) %></td>
+  <td><%= link_to 'Destroy', haiku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

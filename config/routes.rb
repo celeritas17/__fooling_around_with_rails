@@ -1,4 +1,7 @@
 FirstProject::Application.routes.draw do
+  resources :haikus
+
+
   devise_for :users
 
   root :to => 'pages#home'
